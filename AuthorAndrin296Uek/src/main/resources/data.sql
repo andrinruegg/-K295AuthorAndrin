@@ -9,3 +9,23 @@ INSERT INTO authority (authority_id, name) VALUES (1, 'READ');
 INSERT INTO authority (authority_id, name) VALUES (2, 'DELETE');
 INSERT INTO authority (authority_id, name) VALUES (3, 'UPDATE');
 INSERT INTO authority (authority_id, name) VALUES (4, 'CREATE');
+
+//roles
+INSERT INTO role (role_id, name) VALUES (1, 'Admin');
+INSERT INTO role (role_id, name) VALUES (2, 'User');
+
+
+//authoritiesForUsers
+INSERT INTO authorities_roles (authority_id, role_id) VALUES (1, 1);
+INSERT INTO authorities_roles (authority_id, role_id) VALUES (2, 1);
+INSERT INTO authorities_roles (authority_id, role_id) VALUES (3, 1);
+INSERT INTO authorities_roles (authority_id, role_id) VALUES (4, 1);
+INSERT INTO authorities_roles (authority_id, role_id) VALUES (1, 2);
+
+
+//users
+INSERT INTO user (id, name, password, role_id) VALUES (1, 'User1', 'password1', 2);
+INSERT INTO user (id, name, password, role_id) VALUES (2, 'User2', 'password2', 2);
+INSERT INTO user (id, name, password, role_id) VALUES (3, 'Admin1', 'password3', 1);
+
+

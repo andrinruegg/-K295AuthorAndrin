@@ -3,9 +3,10 @@ package ch.noseryoung.AuthorAndrin296Uek.domain.author;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import java.util.NoSuchElementException;
 
 import java.util.List;
-import java.util.Optional;
+
 
 @RestController
 @RequestMapping("/authors")
@@ -22,18 +23,20 @@ public class AuthorController {
         return ResponseEntity.ok(authorService.createAuthor(author));
     }
 
+
     @GetMapping
     public ResponseEntity<List<Author>> getAllAuthors() {
         return ResponseEntity.ok(authorService.getAllAuthors());
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<Author> getAuthorById(@PathVariable Integer id) {
-        Optional<Author> authorOptional = authorService.getAuthorById(id);
-        if (authorOptional.isPresent()) {
-            return ResponseEntity.ok(authorOptional.get());
-        } else {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).build();
+    public ResponseEntity<String> getAuthorById(@PathVariable Integer id) {
+        try {
+            Author author = authorService.getAuthorById(id)
+                    .orElseThrow(() -> new NoSuchElementException("The Id you entered was not found"));
+            return ResponseEntity.ok(author.toString());
+        } catch (NoSuchElementException nsee) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body(nsee.getMessage());
         }
     }
 
@@ -47,4 +50,6 @@ public class AuthorController {
         authorService.deleteAuthor(id);
         return ResponseEntity.noContent().build();
     }
+
+
 }

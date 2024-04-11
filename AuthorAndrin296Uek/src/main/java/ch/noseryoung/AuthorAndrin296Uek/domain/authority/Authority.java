@@ -20,9 +20,13 @@ public class Authority {
     private Integer authorityId;
 
     @NotBlank
-    @Column(name = "name")
-    private String name;
-
+    @Column(name = "authority_name")
+    private String authority_name;
+/*
     @ManyToMany(mappedBy = "authorities")
     private Set<Role> roles;
+*/
+    public String getName() {
+        return authority_name;
+    }
 }

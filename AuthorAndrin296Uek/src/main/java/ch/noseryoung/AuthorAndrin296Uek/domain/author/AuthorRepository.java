@@ -7,6 +7,7 @@ import java.util.Optional;
 
 @Repository
 public interface AuthorRepository extends JpaRepository<Author, Integer>{
+    /*
     List<Author> findAll();
 
     Optional<Author> findById(Integer id);
@@ -14,4 +15,5 @@ public interface AuthorRepository extends JpaRepository<Author, Integer>{
     Author save(Author author);
 
     void deleteById(Integer id);
+     */
 }

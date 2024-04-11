@@ -1,5 +1,7 @@
-package ch.noseryoung.AuthorAndrin296Uek.domain.security;
+package ch.noseryoung.AuthorAndrin296Uek.security;
 
+
+import ch.noseryoung.AuthorAndrin296Uek.domain.user.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +17,6 @@ import org.springframework.security.config.annotation.web.configurers.AbstractHt
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import ch.noseryoung.AuthorAndrin296Uek.domain.user.UserService;
 
 @Configuration
 @EnableWebSecurity
@@ -39,10 +40,9 @@ public class WebSecurityConfig {
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         return http.authorizeHttpRequests(
-                        requests -> requests
-                                .requestMatchers(HttpMethod.GET, "/v3/api-docs", "/v3/api-docs/swagger-config", "/swagger-ui/*")
-                                .permitAll()
-                                .anyRequest().authenticated())
+                        requests -> requests.requestMatchers(HttpMethod.GET, "/v3/api-docs", "/v3/api-docs/swagger-config", "/swagger-ui/*").permitAll()
+                                .anyRequest().authenticated()
+                )
                 .sessionManagement(session -> session.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .cors(AbstractHttpConfigurer::disable)
                 .csrf(AbstractHttpConfigurer::disable)
@@ -50,4 +50,3 @@ public class WebSecurityConfig {
                 .build();
     }
 }
-

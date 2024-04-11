@@ -24,6 +24,7 @@ public class AuthorController {
     }
 
 
+
     @GetMapping
     public ResponseEntity<List<Author>> getAllAuthors() {
         return ResponseEntity.ok(authorService.getAllAuthors());

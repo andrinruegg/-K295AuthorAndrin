@@ -36,3 +36,20 @@ Thanks for folowing my tutorial and I hope you enjoyed it!
 
 
 # Documentation:
+Note: This is just a short text how I created my project!
+---
+At first I began with the Author part, because its my main part of the project. I created the objects for the Authors. <br>
+Then in the controller and Service class I created the 5 http methods for my project, which are important for the Postman. <br>
+I really didnt add anything to the AuthorRepo Interface except a few methods. <br> <br>
+
+After completing the Author part I made sure that the connection between my database was working. I created a data.sql file and inserted values in the table for the Author. <br>
+
+Next I created Roles and Authorities in both Classes and also inserted them into the data.sql. <br>
+
+After that I used the files from teams as help to create the user and the Security part which was very tricky, as I had problems all the time.
+Finally I filled in the rest of the data in my sql.
+
+
+
+
+

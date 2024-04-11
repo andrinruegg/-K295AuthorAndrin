@@ -8,8 +8,11 @@ Here is how you can test it out:
 ___
 - First you will need to fork or download my project and open it. After that you should open my project. (I recommend using InteliJ)
 - After that you need to set up Docker desktop with the right port etc. to be able to run the project.
-- After running the code and the Docker container enter "http://localhost:8080/authors" in the browser or http://localhost:8080/authors/{id}.
-  An Authorization request will show up so here are both users:
+- After running the code and the Docker container enter "http://localhost:8080/authors" in the browser or http://localhost:8080/authors/{id}. <br>
+
+---
+
+An Authorization request will show up so here are both users:
 
 guest: <br>
 name: user2 <br>

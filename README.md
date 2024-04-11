@@ -1,7 +1,7 @@
-# üK295AuthorAndrin
-![giphy (1)](https://github.com/andrinruegg/UEK295AuthorAndrin/assets/145564904/ceb96ddf-3e00-4eb8-99e1-71a9d6344163)
-<br>
-**Welcome to my Uek295 Project!**
+![Uek295Author (1)](https://github.com/andrinruegg/UEK295AuthorAndrin/assets/145564904/06673d44-df83-4c26-9638-50947558683d)
+
+
+## Welcome to my Uek295 Project! <br>
 The project is about using Springboot and sql and displaying a table.
 <br>
 Here is how you can test it out:
@@ -31,3 +31,8 @@ After being authorized you should be able to use the other http methods to delet
 
 Thanks for folowing my tutorial and I hope you enjoyed it!
 
+
+![giphy (2)](https://github.com/andrinruegg/UEK295AuthorAndrin/assets/145564904/2a9707dc-f5a7-4fd2-8379-68dc598378a3)
+
+
+# Documentation:

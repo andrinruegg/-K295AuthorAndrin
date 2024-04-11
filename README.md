@@ -6,7 +6,7 @@ The project is about using Springboot and sql and displaying a table.
 <br>
 Here is how you can test it out:
 ___
-- First you will need to fork or download my project and open it. After that you should open my project. (I recommend using InteliJ)
+- First you will need to clone my project and extract it. After that you should open my project in an IDE . (I recommend opening it in InteliJ)
 - After that you need to set up Docker desktop with the right port etc. to be able to run the project.
 - After running the code and the Docker container enter "http://localhost:8080/authors" in the browser or http://localhost:8080/authors/{id}. <br>
 

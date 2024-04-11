@@ -2,9 +2,9 @@ package ch.noseryoung.AuthorAndrin296Uek.domain.role;
 
 import ch.noseryoung.AuthorAndrin296Uek.domain.authority.Authority;
 import jakarta.persistence.*;
-import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.validator.constraints.Length;
 
 import java.util.Set;
 
@@ -20,7 +20,7 @@ public class Role {
     private Integer role_id;
 
     @Column(name = "name")
-    @Size(min = 2, max = 20)
+    @Length(min = 2, max = 20)
     private String name;
 
     @ManyToMany(fetch=FetchType.EAGER)
